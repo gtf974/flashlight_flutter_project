@@ -1,16 +1,16 @@
-# flashlight
+# Flashlight ⚡
 
-A new Flutter project.
+A simple example of an app turning on/off the Flashlight
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project uses [Flutter](https://flutter.dev) for any doubt on how to use it, head to the [Docs](https://flutter.dev/docs)
+Once you got all installed:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Download or clone this project into the desired redirectory.
+* #### Run the project:
+  * Open a terminal and head to your project folder using `cd` on Windows
+  * Run `flutter run --no-sound-null-safety` (We run the code without sound null safety because we use a plugin which has not yet migrated)
+* #### Export an apk:
+  * Open a terminal and head to your project folder using `cd` on Windows
+  * Run `flutter build apk --split-per-abi --no-sound-null-safety`
