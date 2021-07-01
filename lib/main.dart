@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_flashlight/flutter_flashlight.dart';
+import 'package:permission_handler/permission_handler.dart';
 void main() {
   runApp(MyApp());
 }
@@ -46,24 +47,27 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void switchFlashLight() {
-    if (_hasFlashlight) {
-      switch (flashState) {
-        case FlashState.off:
-          setState(() {
-            flashState = FlashState.on;
-            Flashlight.lightOn(); 
-          });
-          break;
-        case FlashState.on:
-          setState(() {
-            flashState = FlashState.off;
-            Flashlight.lightOff(); 
-          });
-          break;
+  void switchFlashLight() async {
+
+    if (await Permission.camera.request().isGranted) {
+      if (_hasFlashlight) {
+        switch (flashState) {
+          case FlashState.off:
+            setState(() {
+              flashState = FlashState.on;
+              Flashlight.lightOn(); 
+            });
+            break;
+          case FlashState.on:
+            setState(() {
+              flashState = FlashState.off;
+              Flashlight.lightOff(); 
+            });
+            break;
+        }
+      } else {
+        print("L'appareil n'a pas de flash");
       }
-    } else {
-      print("L'appareil n'a pas de flash");
     }
   }
 
