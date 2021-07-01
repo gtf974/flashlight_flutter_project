@@ -5,6 +5,7 @@ A simple example of an app turning on/off the Flashlight
 ## Getting Started
 
 This project uses [Flutter](https://flutter.dev) for any doubt on how to use it, head to the [Docs](https://flutter.dev/docs)
+
 Once you got all installed:
 
 * Download or clone this project into the desired redirectory.
