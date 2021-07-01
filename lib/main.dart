@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_flashlight/flutter_flashlight.dart';
-
 void main() {
   runApp(MyApp());
 }
